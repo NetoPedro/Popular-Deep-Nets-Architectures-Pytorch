@@ -8,18 +8,54 @@ This repository intends to aggregate implementation of deep neural networks desc
 
 State| Paper Summary      | Implementation   | Results Summary  |
 :-------------: | :-------------: |:-------------:| :-------------:|
-Holding | X | X| X|
-Doing | |  |   |
+Holding | | X| X|
+Doing | X|  |   |
 Done | |  |    |
 
 ## [VGG16](https://arxiv.org/abs/1505.06798)
 
+State| Paper Summary      | Implementation   | Results Summary  |
+:-------------: | :-------------: |:-------------:| :-------------:|
+Holding | X | X| X|
+Doing | |  |   |
+Done | |  |    |
+
 ## [ResNet](https://arxiv.org/abs/1704.06904)
+
+State| Paper Summary      | Implementation   | Results Summary  |
+:-------------: | :-------------: |:-------------:| :-------------:|
+Holding | X | X| X|
+Doing | |  |   |
+Done | |  |    |
 
 ## [GoogLeNet](https://arxiv.org/abs/1409.4842)
 
+State| Paper Summary      | Implementation   | Results Summary  |
+:-------------: | :-------------: |:-------------:| :-------------:|
+Holding | X | X| X|
+Doing | |  |   |
+Done | |  |    |
+
 ## [Inception](https://arxiv.org/abs/1512.00567)
+
+State| Paper Summary      | Implementation   | Results Summary  |
+:-------------: | :-------------: |:-------------:| :-------------:|
+Holding | X | X| X|
+Doing | |  |   |
+Done | |  |    |
 
 ## [Xception](https://arxiv.org/abs/1610.02357)
 
+State| Paper Summary      | Implementation   | Results Summary  |
+:-------------: | :-------------: |:-------------:| :-------------:|
+Holding | X | X| X|
+Doing | |  |   |
+Done | |  |    |
+
 ## [MobileNet](https://arxiv.org/abs/1704.04861)
+
+State| Paper Summary      | Implementation   | Results Summary  |
+:-------------: | :-------------: |:-------------:| :-------------:|
+Holding | X | X| X|
+Doing | |  |   |
+Done | |  |    |
