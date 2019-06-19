@@ -3,7 +3,7 @@
 This repository intends to aggregate implementation of deep neural networks described on popular papers. These networks became not only popular but also a mark in the deep learning history and development. It is a required knowledge for any deep learning researcher or practitioner because most of them were also pioneers in some advance in the field.  
 
 
-[AlexNet](##https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks)
+[##AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks)
 
 
 State| Paper Summary      | Implementation   | Results Summary  |
