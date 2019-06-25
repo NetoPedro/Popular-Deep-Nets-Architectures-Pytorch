@@ -1,4 +1,4 @@
-# AlexNet 
+# AlexNet (Work in progress)
 
 ## Paper 
 
