@@ -21,7 +21,9 @@ researchers like neural networks.
 
 However, using a neural network was not enough to achieve the desired performance with the new datasets. Neural networks 
 were particularly challenging to train, with a substantial computational cost and prone to overfitting. Therefore the 
-previous research papers on new activations like ReLU, regularization methods like Dropout and the presented 
+previous research papers on new activations like 
+[ReLU](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.165.6419&rep=rep1&type=pdf), regularization methods like 
+[Dropout](https://arxiv.org/pdf/1207.0580.pdf) and the presented 
 implementation of efficient convolutions on a GPU were positively significant to the architecture described here. 
 
 
@@ -30,7 +32,8 @@ implementation of efficient convolutions on a GPU were positively significant to
 ImageNet was one of the introductory datasets to gather millions of examples, with over 15 millions of images 
 distributed across 22 thousand categories. The existence of such a large dataset was one key element to the emergence of 
 deep learning and the popularity of neural networks as models with a significant capability to learn complex functions. 
-The dataset is in its 2010 version already split between test, validation and train data. 
+The dataset is in its [2010 version](http://www.image-net.org/challenges/LSVRC/2010/) already split between test, 
+validation and train data. 
 
 In the dataset, to evaluate each model, two errors are measured. The first, top-1, refers to situations where the 
 correct label is the label with the highest probability accordingly to the model. The second, top-5, refers to 
