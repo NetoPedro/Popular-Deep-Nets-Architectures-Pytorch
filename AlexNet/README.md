@@ -60,3 +60,9 @@ considerably faster and easier to train.
 
 - Sigmoid -> ![sigmoid](https://latex.codecogs.com/gif.latex?%281%20&plus;%20e%5E%7B-x%7D%29%5E%7B-1%7D) 
 
+Previous papers already tried some different activations, e.g. f(x) = |tanh(x)| by [Jarrett et al.](https://ieeexplore.ieee.org/document/5459469). 
+The ability of networks using ReLU to learn faster are crucial to performance on large datasets. 
+
+#### Local Response Normalization 
+
+ 
