@@ -41,3 +41,22 @@ situations where the true label is in the five predictions with larger probabili
 
 All the images are further scaled to be possible to use them as the input of the same neural network. 
 The chosen scale is 256x256. 
+
+### Architecture 
+
+The architecture of this network surprised by the number of layers (8!) and some uncommon features at that time like 
+ReLU and Dropout. 
+
+#### Relu Nonlinearity 
+
+Activation used on previous paper were particularly difficult to train. Some examples of those activations, 
+commonly mentioned as 
+saturating nonlinearities, are the sigmoid and tanh functions. ReLU, also called non-saturating nonlinearity, is 
+considerably faster and easier to train. 
+ 
+- ReLU -> max(0,x)
+
+- Tanh -> tanh(x)
+
+- Sigmoid -> 1/() 
+
