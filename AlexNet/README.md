@@ -58,5 +58,5 @@ considerably faster and easier to train.
 
 - Tanh -> tanh(x)
 
-- Sigmoid -> 1/() 
+- Sigmoid -> ![sigmoid](https://latex.codecogs.com/gif.latex?%281%20&plus;%20e%5E%7B-x%7D%29%5E%7B-1%7D) 
 
