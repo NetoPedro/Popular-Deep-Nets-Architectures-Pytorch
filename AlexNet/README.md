@@ -65,4 +65,13 @@ The ability of networks using ReLU to learn faster are crucial to performance on
 
 #### Local Response Normalization 
 
+The use of ReLU removes the necessity no have input normalization. Nevertheless, the authors found that it still 
+remains beneficial to network performance to apply some normalization after the nonlinearity in some layers. 
+
+![equation](https://latex.codecogs.com/gif.latex?b_%7Bx%2Cy%7D%5Ei%20%3D%20a_%7Bx%2Cy%7D%5Ei%20%28k%20&plus;%20%5Calpha%20%5Csum_%7Bj%3Dmax%280%2Ci-n/2%29%7D%5E%7Bmin%28N-1%2Ci&plus;n/2%29%7D%20%28a_%7Bx%2Cy%7D%5Ej%29%5E2%29%5E%5Cbeta)
+
+In the equation above, used to normalize the data between layers, 'b' represents the normalized data, 'a' is the 
+activity of the neurons belonging to the layer. The remaining letters are hyperparameters, thus calculated by 
+comparing the results of the network in the validation set. 
+
  
