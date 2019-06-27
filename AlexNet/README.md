@@ -74,4 +74,24 @@ In the equation above, used to normalize the data between layers, 'b' represents
 activity of the neurons belonging to the layer. The remaining letters are hyperparameters, thus calculated by 
 comparing the results of the network in the validation set. 
 
- 
+#### Overlapping pooling 
+
+
+#### Overall review of the architecture
+
+
+### Addressing Overfitting
+
+#### Data Augmentation 
+
+
+#### Dropout 
+
+
+### Training and Learning 
+
+Details of training and learning are further explained in the implementation section below.
+
+
+## Implementation/Architecture Reproduction 
+
