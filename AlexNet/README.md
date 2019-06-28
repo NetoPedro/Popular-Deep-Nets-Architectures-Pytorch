@@ -76,6 +76,14 @@ comparing the results of the network in the validation set.
 
 #### Overlapping pooling 
 
+Pooling layers are a popular way to resume the information in some input information, by moving a sliding window by some
+ value (stride!) and capturing values in a square of a specific size (window size). The information in the window is 
+ resumed either by summing all the elements, selecting the max or just averaging them. 
+
+Previous implementations of pooling layers, either max or sum pooling generally consider the stride to be equal to the 
+size of the window. Although, the authors found that it improves the error rate and reduces the probability of 
+overfitting when the pooling layer has a stride lower than the window size. This creates overlapping information since 
+some positions on the input are going to be used more than once to calculate the output. 
 
 #### Overall review of the architecture
 
