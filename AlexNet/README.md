@@ -123,6 +123,15 @@ increase too much the computation time needed.
 
 #### Data Augmentation 
 
+The paper describes two techniques to artificially increase the amount of data available, that are in practice, 
+computationally free, since they have a minimal cost to be computed, and are computed on the CPU while the previous 
+batch is training on the GPU. 
+
+The first approach generates horizontal reflexions of the images and translations. This is done by extracting random 
+224x224 patches from the 256x256 images and use them to train the network. This leads to 2048 times higher training set 
+but with a lot of interdependent instances.  At test time, the four corners and the center are extracted as 224x224 
+patches and their reflexions. To obtain the final prediction an average of the predictions on the 10 patches is taken 
+into account. 
 
 
 #### Dropout 
