@@ -118,9 +118,11 @@ The architecture for a single GPU or CPU (paper shows the architecture for 2 GPU
 Overfitting was a nightmare of most machine learning researchers during years, and despite still being a recurrent 
 problem to several problems and models, recent developments lead to new methods to handle and reduce the probability of 
 overfitting. On this section, the authors discussed some of those methods that helped to improve the stability of this 
-network and further explain why that happens. 
+network and further explain why that happens. Not only that but the authors also tried to use methods that do not 
+increase too much the computation time needed. 
 
 #### Data Augmentation 
+
 
 
 #### Dropout 
