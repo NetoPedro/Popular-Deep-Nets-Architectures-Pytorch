@@ -142,6 +142,16 @@ helps the neural network to understand that the object does not change based on 
 
 #### Dropout 
 
+Dropout was a recent technique, that implements a very efficient and doable model combination technique, that remains 
+feasible when applied to big neural networks. Nevertheless, it does increase the training time by a factor of 2. 
+
+The basic idea of dropout is for each neuron of a neural network the output of the neuron will be 0 with a probability 
+of 0.5 (this probability can change). Those neurons will not be part of the forward and backward pass of a neural 
+network. The final result is that at each training iteration the network architecture will be different, however, it 
+will be sharing weights with previous architectures. 
+
+At the test time, there are no changes to the architecture, but the output of each neuron is multiplied by 0.5, which 
+the authors say to be a reasonable approximation to the geometric approximation to many dropout networks-
 
 ### Training and Learning 
 
