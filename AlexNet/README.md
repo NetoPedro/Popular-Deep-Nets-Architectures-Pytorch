@@ -133,6 +133,12 @@ but with a lot of interdependent instances.  At test time, the four corners and 
 patches and their reflexions. To obtain the final prediction an average of the predictions on the 10 patches is taken 
 into account. 
 
+The second approach is related to the changes on the RGB channels, it is said by the authors that they perform the 
+principal component analysis on the RGB pixel values through the dataset. Afterward, they add multiples of the 
+principal components found to the original image. These multiples have magnitudes derivated from the corresponding 
+eigenvalues times a random value drawn from a Gaussian (mean 0, std 0.1). 
+Each value is drawn only once per image on one iteration, and there is 1 value per RGB channel. This second approach 
+helps the neural network to understand that the object does not change based on the color or ilumination. 
 
 #### Dropout 
 
