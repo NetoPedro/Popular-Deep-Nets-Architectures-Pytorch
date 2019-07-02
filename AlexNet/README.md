@@ -13,7 +13,7 @@ deep learning.
 
 ### Introduction 
 
-Until a few years before this paper, the size of the dataset was not considerably big, therefore some simple model 
+Until a few years before this paper, the size of datasets was not considerably big, therefore some simple model 
 conjugated with data augmentation techniques were enough to achieve a considerable performance and avoid overfitting. 
 With the release of ImageNet dataset and others of the same kind, previous models became rather insufficient to learn 
 all the complexities in the data distribution. Therefore other, more uncommon, models started to spark the interest of 
