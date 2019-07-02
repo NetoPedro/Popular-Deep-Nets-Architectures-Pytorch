@@ -12,7 +12,7 @@ Holding | | X| X|
 Doing | |  |   |
 Done | X|  |    |
 
-## [VGG16](https://arxiv.org/abs/1505.06798)
+## [VGG](https://arxiv.org/pdf/1409.1556.pdf)
 
 State| Paper Summary      | Implementation   | Results Summary  |
 :-------------: | :-------------: |:-------------:| :-------------:|
@@ -28,7 +28,7 @@ Holding | X | X| X|
 Doing | |  |   |
 Done | |  |    |
 
-## [GoogLeNet](https://arxiv.org/abs/1409.4842)
+## [GoogLeNet (Inception v1)](https://arxiv.org/abs/1409.4842)
 
 State| Paper Summary      | Implementation   | Results Summary  |
 :-------------: | :-------------: |:-------------:| :-------------:|
@@ -36,7 +36,7 @@ Holding | X | X| X|
 Doing | |  |   |
 Done | |  |    |
 
-## [Inception](https://arxiv.org/abs/1512.00567)
+## [Inception v2](https://arxiv.org/abs/1512.00567)
 
 State| Paper Summary      | Implementation   | Results Summary  |
 :-------------: | :-------------: |:-------------:| :-------------:|
@@ -44,7 +44,7 @@ Holding | X | X| X|
 Doing | |  |   |
 Done | |  |    |
 
-## [Xception](https://arxiv.org/abs/1610.02357)
+## [Xception (Inception v3)](https://arxiv.org/abs/1610.02357)
 
 State| Paper Summary      | Implementation   | Results Summary  |
 :-------------: | :-------------: |:-------------:| :-------------:|
