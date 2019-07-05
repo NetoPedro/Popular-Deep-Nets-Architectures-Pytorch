@@ -12,5 +12,26 @@ popularized Deep Learning.
 ### Introduction 
 
 
+### ConvNet Configurations 
+
+#### Architecture
+
+#### Configurations and Discussion 
+
+### Classification Framework 
+
+#### Training
+
+#### Testing 
+
+### Classification Experiments 
+
+#### Single Scale Evaluation 
+
+#### Multi-Scale Evaluation
+
+#### Multi-Crop Evaluation 
+
+
 ## Implementation/Architecture Reproduction 
 
