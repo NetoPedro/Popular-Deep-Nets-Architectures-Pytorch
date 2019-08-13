@@ -109,7 +109,7 @@ The architecture for a single GPU or CPU (paper shows the architecture for 2 GPU
 - Fully-connected Layer (Input = 4096, Output = 4096, Neurons = 4096)
 - ReLU nonlinearity
 - Fully-connected Layer (Input = 4096, Output = 1000, Neurons = 4096)
-- ReLU nonlinearity
+- Softmax Activation
 
 
 
