@@ -91,11 +91,11 @@ The architecture for a single GPU or CPU (paper shows the architecture for 2 GPU
 
 - Convolutional Layer (Input = 224x224x3, Kernel = 11x11x96, stride = 4, padding = 2)
 - ReLU nonlinearity
-- Response-normalization Layer
+- Response-normalization Layer (Not used anymore)
 - Max Pooling Layer (stride = 2, window size = 3)
 - Convolutional Layer (Input = 27x27x96 , Kernel = 5x5x256, stride = 1, padding = 2)
 - ReLU nonlinearity
-- Response-normalization Layer
+- Response-normalization Layer (Not used anymore)
 - Max Pooling Layer (stride = 2, window size = 3)
 - Convolutional Layer (Input = 13x13x256 , Kernel = 3x3x384, stride = 1, padding = 1)
 - ReLU nonlinearity
