@@ -89,19 +89,19 @@ some positions on the input are going to be used more than once to calculate the
 
 The architecture for a single GPU or CPU (paper shows the architecture for 2 GPUs) is the following: 
 
-- Convolutional Layer (Input = 224x224x3, Kernel = 11x11x96, stride = 4)
+- Convolutional Layer (Input = 224x224x3, Kernel = 11x11x96, stride = 4, padding = 2)
 - ReLU nonlinearity
-- Response-normalization Layer
+- Response-normalization Layer (Not used anymore)
 - Max Pooling Layer (stride = 2, window size = 3)
-- Convolutional Layer (Input = 27x27x96 , Kernel = 5x5x256, stride = 1)
+- Convolutional Layer (Input = 27x27x96 , Kernel = 5x5x256, stride = 1, padding = 2)
 - ReLU nonlinearity
-- Response-normalization Layer
+- Response-normalization Layer (Not used anymore)
 - Max Pooling Layer (stride = 2, window size = 3)
-- Convolutional Layer (Input = 13x13x256 , Kernel = 3x3x384, stride = 1)
+- Convolutional Layer (Input = 13x13x256 , Kernel = 3x3x384, stride = 1, padding = 1)
 - ReLU nonlinearity
-- Convolutional Layer (Input = 13x13x384 , Kernel = 3x3x384, stride = 1)
+- Convolutional Layer (Input = 13x13x384 , Kernel = 3x3x384, stride = 1, padding = 1)
 - ReLU nonlinearity
-- Convolutional Layer (Input = 13x13x384 , Kernel = 3x3x256, stride = 1)
+- Convolutional Layer (Input = 13x13x384 , Kernel = 3x3x256, stride = 1, padding = 1)
 - ReLU nonlinearity
 - Max Pooling Layer (stride = 2, window size = 3)
 - Fully-connected Layer (Input = 6x6x256, Output = 4096, Neurons = 4096)
@@ -109,7 +109,7 @@ The architecture for a single GPU or CPU (paper shows the architecture for 2 GPU
 - Fully-connected Layer (Input = 4096, Output = 4096, Neurons = 4096)
 - ReLU nonlinearity
 - Fully-connected Layer (Input = 4096, Output = 1000, Neurons = 4096)
-- ReLU nonlinearity
+- Softmax Activation
 
 
 
