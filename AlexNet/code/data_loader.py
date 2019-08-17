@@ -1,8 +1,20 @@
 import torchvision
 import torch
+
+class To3Channels(object):
+    """Convert ndarrays in sample to Tensors."""
+
+    def __call__(self, sample):
+        if sample.shape[0] < 3:
+            sample = torch.squeeze(sample)
+            sample = torch.stack([sample, sample,sample], 0)
+
+        return sample
+
 transformer =  torchvision.transforms.Compose(
     [torchvision.transforms.Resize(224),
      torchvision.transforms.ToTensor(),
+     To3Channels(),
      torchvision.transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))])
 
 CIFAR10_train = torchvision.datasets.CIFAR10("../datasets/CIFAR10/", train=True, transform=transformer, target_transform=None, download=True)
@@ -43,3 +55,5 @@ def get_loaders(dataset = "CIFAR10"):
 
 
     return train_loader,test_loader,labels_num
+
+
