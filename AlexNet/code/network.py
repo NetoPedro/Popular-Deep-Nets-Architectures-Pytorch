@@ -31,9 +31,11 @@ class AlexNet(nn.Module):
 
         self.fc6 = nn.Linear(6*6*256,4096)
         self.actv6 = nn.ReLU()
+        self.dropout6 = nn.Dropout(0.5)
 
         self.fc7 = nn.Linear(4096, 4096)
         self.actv7 = nn.ReLU()
+        self.dropout7 = nn.Dropout(0.5)
 
         self.fc8 = nn.Linear(4096,num_classes)
         self.actv8 = nn.Softmax()
@@ -55,9 +57,9 @@ class AlexNet(nn.Module):
         x = self.pool5(x)
 
         x = x.reshape(-1)
-        x = self.actv6(self.fc6(x))
+        x = self.dropout6(self.actv6(self.fc6(x)))
 
-        x = self.actv7(self.fc7(x))
+        x = self.dropout7(self.actv7(self.fc7(x)))
 
         x = self.actv8(self.fc8(x))
 
