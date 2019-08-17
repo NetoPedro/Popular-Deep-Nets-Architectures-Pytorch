@@ -1,8 +1,8 @@
 import torchvision
 import torch
 transformer =  torchvision.transforms.Compose(
-    [torchvision.transforms.ToTensor(),
-     torchvision.transforms.Resize(224),
+    [torchvision.transforms.Resize(224),
+     torchvision.transforms.ToTensor(),
      torchvision.transforms.Normalize((0.5,0.5,0.5),(0.5,0.5,0.5))])
 
 CIFAR10_train = torchvision.datasets.CIFAR10("../datasets/CIFAR10/", train=True, transform=transformer, target_transform=None, download=True)
