@@ -41,6 +41,7 @@ class AlexNet(nn.Module):
         self.actv8 = nn.Softmax()
 
 
+
     def forward(self, x):
 
         x = self.actv1(self.conv1(x))
@@ -56,7 +57,7 @@ class AlexNet(nn.Module):
         x = self.actv5(self.conv5(x))
         x = self.pool5(x)
 
-        x = x.reshape(-1)
+        x = torch.flatten(x, start_dim=1)
         x = self.dropout6(self.actv6(self.fc6(x)))
 
         x = self.dropout7(self.actv7(self.fc7(x)))
