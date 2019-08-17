@@ -1,6 +1,7 @@
 import torch
 from torch import optim
 
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 def train(net,trainloader,testloader,optim_name = "adam"):
     optimizer = optim.Adam(net.parameters(), 0.001)
@@ -13,7 +14,7 @@ def train(net,trainloader,testloader,optim_name = "adam"):
     for epoch in range(epochs):
         running_loss = 0.0
         for i,data in enumerate(trainloader,0):
-            inputs, labels = data
+            inputs, labels = data[0].to(device), data[1].to(device)
 
             # zero the parameter gradients
             optimizer.zero_grad()
@@ -25,8 +26,9 @@ def train(net,trainloader,testloader,optim_name = "adam"):
             optimizer.step()
 
             running_loss += loss.item()
-            if i % 2000 == 1999:  # print every 2000 mini-batches
+            print(i)
+            if i % 100 == 99:  # print every 100 mini-batches
                 print('[%d, %5d] loss: %.3f' %
-                      (epoch + 1, i + 1, running_loss / 2000))
+                      (epoch + 1, i + 1, running_loss / 100))
                 losses.append(running_loss)
                 running_loss = 0.0
