@@ -104,9 +104,9 @@ The architecture for a single GPU or CPU (paper shows the architecture for 2 GPU
 - Convolutional Layer (Input = 13x13x384 , Kernel = 3x3x256, stride = 1, padding = 1)
 - ReLU nonlinearity
 - Max Pooling Layer (stride = 2, window size = 3)
-- Fully-connected Layer (Input = 6x6x256, Output = 4096, Neurons = 4096)
+- Fully-connected Layer (Input = 6x6x256, Output = 4096, Neurons = 4096) with Dropout = 0.5
 - ReLU nonlinearity
-- Fully-connected Layer (Input = 4096, Output = 4096, Neurons = 4096)
+- Fully-connected Layer (Input = 4096, Output = 4096, Neurons = 4096) with Dropout = 0.5
 - ReLU nonlinearity
 - Fully-connected Layer (Input = 4096, Output = 1000, Neurons = 4096)
 - Softmax Activation
