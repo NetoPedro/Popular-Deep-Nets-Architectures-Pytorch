@@ -38,7 +38,7 @@ class AlexNet(nn.Module):
         self.dropout7 = nn.Dropout(0.5)
 
         self.fc8 = nn.Linear(4096,num_classes)
-        self.actv8 = nn.Softmax()
+        #self.actv8 = nn.Softmax(dim=1)
 
 
 
@@ -62,7 +62,7 @@ class AlexNet(nn.Module):
 
         x = self.dropout7(self.actv7(self.fc7(x)))
 
-        x = self.actv8(self.fc8(x))
-
+        #x = self.actv8(self.fc8(x))
+        x = self.fc8(x)
         return x
 
