@@ -11,6 +11,7 @@ def train(net,trainloader,testloader,optim_name = "adam"):
     criterion = torch.nn.CrossEntropyLoss()
     epochs = 30
     losses = []
+    accuracies = []
     for epoch in range(epochs):
         running_loss = 0.0
         for i,data in enumerate(trainloader,0):
@@ -24,7 +25,6 @@ def train(net,trainloader,testloader,optim_name = "adam"):
             loss = criterion(outputs, labels)
             loss.backward()
             optimizer.step()
-            print(i)
             running_loss += loss.item()
             if i % 200 == 199:  # print every 100 mini-batches
                 print('[%d, %5d] loss: %.3f' %
@@ -33,7 +33,10 @@ def train(net,trainloader,testloader,optim_name = "adam"):
                 running_loss = 0.0
 
         accuracy = compute_accuracy(net,testloader)
+        accuracies.append(accuracy)
         print('Accuracy of the network on the test images: %.3f' % accuracy)
+
+    return accuracies,losses
 
 def compute_accuracy(net, testloader):
     net.eval()
