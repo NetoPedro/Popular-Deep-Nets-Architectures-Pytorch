@@ -9,13 +9,13 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(device)
 
 
-def run(dataset = "CIFAR10"):
+def run(dataset = "CIFAR10",epochs = 30):
     trainloader, testloader, num_classes = data_loader.get_loaders(dataset)
 
     net = network.AlexNet(num_classes)
     net.to(device)
 
-    accuracies, losses = trainer.train(net, trainloader, testloader)
+    accuracies, losses = trainer.train(net, trainloader, testloader,epochs = epochs)
 
     x = np.linspace(0, 1, len(losses))
 
@@ -27,8 +27,8 @@ def run(dataset = "CIFAR10"):
     mlp.plot(losses, accuracies)
     mlp.show()
 
-run()
-run("CIFAR100")
-run("FASHION_MNIST")
+run(epochs=15)
+run("CIFAR100",30)
+run("FASHION_MNIST",5)
 
 

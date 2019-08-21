@@ -3,13 +3,12 @@ from torch import optim
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-def train(net,trainloader,testloader,optim_name = "adam"):
+def train(net,trainloader,testloader,optim_name = "adam",epochs = 30):
     optimizer = optim.Adam(net.parameters(),lr= 0.001,weight_decay=0.0005)
     if optim_name == "sgd":
         optimizer = optim.SGD(net.parameters(),0.001,0.9)
 
     criterion = torch.nn.CrossEntropyLoss()
-    epochs = 30
     losses = []
     accuracies = []
     for epoch in range(epochs):
