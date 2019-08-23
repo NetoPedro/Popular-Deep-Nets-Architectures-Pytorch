@@ -8,9 +8,9 @@ This repository intends to aggregate implementation of deep neural networks desc
 
 State| Paper Summary      | Implementation   | Results Summary  |
 :-------------: | :-------------: |:-------------:| :-------------:|
-Holding | | | X|
+Holding | | | |
 Doing | |  |   |
-Done | X|  X|    |
+Done | X|  X|  X|
 
 ## [VGG](https://arxiv.org/pdf/1409.1556.pdf)
 
