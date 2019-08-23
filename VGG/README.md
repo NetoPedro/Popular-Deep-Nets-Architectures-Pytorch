@@ -11,14 +11,16 @@ popularized Deep Learning.
 
 ### Introduction 
 
-The main concern of this paper is to address the depth of the convolutional neural network. It is done with parameters 
-tuning combined with small iterative increases in the number of layers. The essential element that allows this process 
-to become feasible is the size of the filters ( 3x3 on all Conv layers). 
+The main concern of this paper is to address the depth of the convolutional neural network. It is done with parameters tuning combined with small iterative increases in the number of layers. The essential element that allows this process to become feasible is the size of the filters ( 3x3 on all Conv layers). The paper further explains how such small filters can capture the same information of others with window sizes of 7. 
 
 
 ### ConvNet Configurations 
 
+This section explains with detail the configuration of the network that will be studied, as well as the configuration of the evaluation process. 
+
 #### Architecture
+
+
 
 #### Configurations and Discussion 
 
