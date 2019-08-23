@@ -160,3 +160,9 @@ Details of training and learning are further explained in the implementation sec
 
 ## Implementation/Architecture Reproduction 
 
+Dataset| Training Epochs      | Cross-Entropy Training Loss    |  Accuracy |
+:-------------: | :-------------: |:-------------:| :-------------:|
+CIFAR10 | 15 | 0.329 | 72.2% |
+CIFAR100 | 30 |  0.872 | 28.6%  |
+Fashion_MNIST | 5 |  0.272|  89.4%  |
+
