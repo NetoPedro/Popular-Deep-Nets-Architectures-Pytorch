@@ -20,7 +20,11 @@ This section explains with detail the configuration of the network that will be 
 
 #### Architecture
 
+The network requires an input with 3 channels (RGB) and a resolution of 224x224. For the convolutions, all layers have a filter size of 3x3. To argue with the choice of this filter size, authors mention that this is the smallest size to include a notion of left/right, up/down and center. With a stride of 1, the chosen padding of 1, is selected to keep the input and the output sizes equal, in terms of resolution. The resolution reduction is achieved with 5 max-pooling layers after specific convolutions, these reductions are not overlapping, meaning that the stride is not lower than the window size (2x2 for the window and 2 for the stride).  
 
+Finally, all the networks share the same structure of fully connected layers, with 3 layers of 4096, 4096 and 1000 hidden units respectively.
+
+All the above-mentioned layers are followed by reLU nonlinearity. 
 
 #### Configurations and Discussion 
 
