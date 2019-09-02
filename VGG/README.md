@@ -45,12 +45,11 @@ The training had the following configuration:
 
 It is also shown that convergence is attainable faster than with previous models due to the reduced number of parameters that represent a reduction in the complexity of the model thus an implicit regularization, and also by the pre-initialisation of some layers. 
 
-
-#### Testing 
-
 ### Classification Experiments 
 
 #### Single Scale Evaluation 
+
+It is noted that local response normalization layers do not bring performance improvements. Hence, it is removed. It is also shown that despite the enhanced performance with the increase of depth, configurations using 3x3 layers performed better than those using 3 stacks of 1x1. For this particular dataset, 19 convolutional layers are the sweet spot in terms of classification error.  
 
 #### Multi-Scale Evaluation
 
