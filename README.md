@@ -16,9 +16,9 @@ Done | X|  X|  X|
 
 State| Paper Summary      | Implementation   | Results Summary  |
 :-------------: | :-------------: |:-------------:| :-------------:|
-Holding |  | X| X|
-Doing | X |  |   |
-Done | |  |    |
+Holding |  | | X|
+Doing |  |  X|   |
+Done | X |  |    |
 
 ## [ResNet](https://arxiv.org/abs/1704.06904)
 
