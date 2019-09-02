@@ -1,4 +1,4 @@
-# VGG (Work in progress)
+# VGG 
 
 ## Paper 
 
