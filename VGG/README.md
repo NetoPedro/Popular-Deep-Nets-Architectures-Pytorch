@@ -28,6 +28,8 @@ All the above-mentioned layers are followed by reLU nonlinearity.
 
 #### Configurations and Discussion 
 
+How can a stack of 3 smaller layers (e.g. 3x3) outperform a bigger layer size of (7x7)? Well, to begin with, the model becomes simpler by reducing the parameters by almost half. Secondly, stacking 3 layers allows the authors to use 2 more nonlinearities, increasing the discrimination of the model. This model could also beat another state of the art models when only considering single network accuracy. 
+
 ### Classification Framework 
 
 #### Training
