@@ -45,12 +45,44 @@ class VGG16(nn.Module):
 
         self.fc6 = nn.Linear(7*7*512,4096)
         self.actv6 = nn.ReLU()
+        self.dropout6 = nn.Dropout(0.5)
+
         self.fc7 = nn.Linear(4096,4096)
         self.actv7 = nn.ReLU()
+        self.dropout7 = nn.Dropout(0.5)
+
         self.fc8 = nn.Linear(4096,num_classes)
 
     def forward(self, x):
 
+        x= self.actv1_1(self.conv1_1(x))
+        x = self.actv1_2(self.conv1_2(x))
+        x = self.pool1(x)
+
+        x = self.actv2_1(self.conv2_1(x))
+        x = self.actv2_2(self.conv2_2(x))
+        x = self.pool2(x)
+
+        x = self.actv3_1(self.conv3_1(x))
+        x = self.actv3_2(self.conv3_2(x))
+        x = self.actv3_3(self.conv3_3(x))
+        x = self.pool3(x)
+
+        x = self.actv4_1(self.conv4_1(x))
+        x = self.actv4_2(self.conv4_2(x))
+        x = self.actv4_3(self.conv4_3(x))
+        x = self.pool4(x)
+
+        x = self.actv5_1(self.conv5_1(x))
+        x = self.actv5_2(self.conv5_2(x))
+        x = self.actv5_3(self.conv5_3(x))
+        x = self.pool5(x)
+
+        x = self.dropout6(self.actv6(self.fc6(x)))
+
+        x = self.dropout7(self.actv7(self.fc7(x)))
+
+        x = self.fc8(x)
 
 
         return x
