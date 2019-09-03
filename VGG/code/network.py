@@ -83,6 +83,4 @@ class VGG16(nn.Module):
         x = self.dropout7(self.actv7(self.fc7(x)))
 
         x = self.fc8(x)
-
-
         return x
