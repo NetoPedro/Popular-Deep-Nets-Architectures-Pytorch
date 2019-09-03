@@ -78,6 +78,8 @@ class VGG16(nn.Module):
         x = self.actv5_3(self.conv5_3(x))
         x = self.pool5(x)
 
+        x = torch.flatten(x, start_dim=1)
+
         x = self.dropout6(self.actv6(self.fc6(x)))
 
         x = self.dropout7(self.actv7(self.fc7(x)))
