@@ -55,7 +55,7 @@ class VGG16(nn.Module):
 
     def forward(self, x):
 
-        x= self.actv1_1(self.conv1_1(x))
+        x = self.actv1_1(self.conv1_1(x))
         x = self.actv1_2(self.conv1_2(x))
         x = self.pool1(x)
 

@@ -15,7 +15,7 @@ def run(dataset = "CIFAR10",epochs = 30):
     net = network.VGG16(num_classes)
     net.to(device)
 
-    accuracies, losses = trainer.train(net, trainloader, testloader,epochs = epochs)
+    accuracies, losses = trainer.train(net, trainloader, testloader,optim_name = "sgd",epochs = epochs)
 
     x = np.linspace(0, 1, len(losses))
 

@@ -34,23 +34,23 @@ def get_loaders(dataset = "CIFAR10"):
     labels_num = None
 
     if dataset == "CIFAR10":
-        train_loader = torch.utils.data.DataLoader(CIFAR10_train, batch_size=32,
-                                          shuffle=True, num_workers=4)
-        test_loader = torch.utils.data.DataLoader(CIFAR10_test, batch_size=32,
-                                          shuffle=True, num_workers=4)
+        train_loader = torch.utils.data.DataLoader(CIFAR10_train, batch_size=64,
+                                          shuffle=True, num_workers=2)
+        test_loader = torch.utils.data.DataLoader(CIFAR10_test, batch_size=64,
+                                          shuffle=True, num_workers=2)
         labels_num = 10#len(set(CIFAR10_train.train_labels))
     elif dataset == "CIFAR100":
-        train_loader = torch.utils.data.DataLoader(CIFAR100_train, batch_size=32,
-                                                   shuffle=True, num_workers=4)
-        test_loader = torch.utils.data.DataLoader(CIFAR100_test, batch_size=32,
-                                                  shuffle=True, num_workers=4)
+        train_loader = torch.utils.data.DataLoader(CIFAR100_train, batch_size=64,
+                                                   shuffle=True, num_workers=2)
+        test_loader = torch.utils.data.DataLoader(CIFAR100_test, batch_size=64,
+                                                  shuffle=True, num_workers=2)
         labels_num = 100
 
     elif dataset == "FASHION_MNIST":
-        train_loader = torch.utils.data.DataLoader(FashionMNIST_train, batch_size=32,
-                                                   shuffle=True, num_workers=4)
-        test_loader = torch.utils.data.DataLoader(FashionMNIST_test, batch_size=32,
-                                                  shuffle=True, num_workers=4)
+        train_loader = torch.utils.data.DataLoader(FashionMNIST_train, batch_size=64,
+                                                   shuffle=True, num_workers=2)
+        test_loader = torch.utils.data.DataLoader(FashionMNIST_test, batch_size=64,
+                                                  shuffle=True, num_workers=2)
         labels_num = len(set(FashionMNIST_train.train_labels))
 
 
