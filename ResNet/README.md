@@ -44,6 +44,26 @@ the identity mapping than to a zero mapping, it is easier to learn F(x) as pertu
 
 #### Identity Mapping by Shortcuts
 
+To be able to implement the residual training in several stacked layers, the authors defined a building block as: 
+
+    y = F(x,{W_i}) + x
+
+Where F(x,{W_i}) represents the residual mapping that needs to be learned. 
+
+One of the main advantages of this approach is that it does not add any extra computational cost beside the addition operation
+ which can be ignored. Furthermore, this allows to compare with other non residual (Plain) networks in a more straightforward manner. 
+
+Although, there are cases where the residual mapping does not preserve the dimensions of the input. For this cases the 
+authors defined: 
+
+    y = F(x,{W_i}) + W_x * x
+    
+To be the function to learn, where W_s is used to linearly project the inputs to match the size of the residual 
+mapping output.
+
+The paper experimented with two or three layers in the residual building block, with W_s being only used if dimension 
+matching is necessary, thus proving that the identity mapping is sufficient to avoid the degradation problem. 
+
 
 ### Architecture 
 
