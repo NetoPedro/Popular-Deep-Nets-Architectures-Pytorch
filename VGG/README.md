@@ -36,12 +36,12 @@ How can a stack of 3 smaller layers (e.g. 3x3) outperform a bigger layer size of
 
 The training had the following configuration:
 
-- Objective: Multinomial logistic regression
-- Batch size: 256
-- Momentum: 0.9
-- Weight Decay: 10*10^(-4)
-- Dropout: 0.5
-- Learning rate: 10^(-2) decreased by a factor of 10 after lack of improvements at validation set accuracy.
+    - Objective: Multinomial logistic regression
+    - Batch size: 256
+    - Momentum: 0.9
+    - Weight Decay: 10*10^(-4)
+    - Dropout: 0.5
+    - Learning rate: 10^(-2) decreased by a factor of 10 after lack of improvements at validation set accuracy.
 
 It is also shown that convergence is attainable faster than with previous models due to the reduced number of parameters that represent a reduction in the complexity of the model thus an implicit regularization, and also by the pre-initialisation of some layers. 
 
