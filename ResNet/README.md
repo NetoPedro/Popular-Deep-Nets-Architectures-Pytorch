@@ -25,7 +25,22 @@ having lower complexity than shallower networks.
 
 ### Deep Residual Learning 
 
+The paper presented a solution to deep networks throughout residual building blocks, this section describes in detail 
+how these blocks work. 
+
 #### Residual Learning 
+
+The authors start considering a mapping of a part of the network called H(x), then they state that it is possible to
+ approximate the residual function H(x) - x. Thus they choose to explicitly approximate the residual function, with 
+ F(x) = H(x) - x => F(x) + x = H(x). 
+ 
+It is considered that despite the network being able to learn both forms, it makes it easier to learn.
+
+So, how does this formulation tackles the degradation problem? If the optimal solution is in a extreme case, the identity mapping,
+then instead of approximating the original H(x) to an identity mapping (which is difficult due to the non linear layers),
+it just needs to push F(x), the non linear part, to 0. In non extreme cases, if the optimal solution is still closer to 
+the identity mapping than to a zero mapping, it is easier to learn F(x) as perturbations in the identity mapping. 
+
 
 #### Identity Mapping by Shortcuts
 
