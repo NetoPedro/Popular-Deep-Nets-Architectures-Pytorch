@@ -67,11 +67,36 @@ matching is necessary, thus proving that the identity mapping is sufficient to a
 
 ### Architecture 
 
+In order to compare the residual training, the authors tested a plain and a residual network with the same configuration 
+aside from the shortcut connections. It is also important to note that despite being deeper, it only has 18% of the computational
+cost of the VGG-19. 
+
+The configuration is the following 
+
+    - Initial 7x7 convolution with 64 channels and stride 2
+    - 2x2 max pooling with stride 2 
+    - 6 3x3 convolutions with 64 channels 
+    - 1 3x3 convolution with 128 channels and stride 2
+    - 7 3x3 convolution with 128 channels
+    - 1 3x3 convolution with 256 channels and stride 2
+    - 11 3x3 convolution with 256 channels
+    - 1 3x3 convolution with 512 channels and stride 2
+    - 5 3x3 convolution with 512 channels
+    - Average pooling layer 
+    - Fully connected layer with 1000 (ImageNet classes) as output 
+
+In this configuration the downsampling of the images happens in the convolutions with stride of 2, and on these layers 
+the number of channels is doubled. 
+
+The architecture is rather similar with the residual version of this network, being the only difference the identity 
+shortcut connections that go after each 2 layers. If between the starting and the ending point of the shortcut there is 
+a downsampling layer, it is necessary to downsample or add a padding of zeros to the identity mapping. The second is cost
+ free. 
+
 #### Residual Block
 
 #### Bottleneck
 
-#### Overall review of the architecture 
 
 
 
