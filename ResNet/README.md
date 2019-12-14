@@ -19,7 +19,9 @@ Hence, there is at least a deeper solution with equal training error, leading th
 should produce no higher training error than its shallower counterpart".
 
 The paper intents to solve this degradation problem by creating and alternative, easier to achieve solution when the 
-identity mapping or something close to it is needed. 
+identity mapping or something close to it is needed. It is then stated that not only the presented solution can increase 
+the depth while still increasing the accuracy, but it is also the deepest network presented until that moment, despite 
+having lower complexity than shallower networks. 
 
 ### Deep Residual Learning 
 
