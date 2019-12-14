@@ -85,6 +85,8 @@ The configuration is the following
     - Average pooling layer 
     - Fully connected layer with 1000 (ImageNet classes) as output 
 
+The network number of trainable layers is 34 (notice that it is much deeper than the VGG-19).
+
 In this configuration the downsampling of the images happens in the convolutions with stride of 2, and on these layers 
 the number of channels is doubled. 
 
