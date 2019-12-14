@@ -30,8 +30,8 @@ how these blocks work.
 
 #### Residual Learning 
 
-The authors start considering a mapping of a part of the network called H(x), then they state that it is possible to
- approximate the residual function H(x) - x. Thus they choose to explicitly approximate the residual function, with 
+The authors start considering a mapping of a part of the network called H(x), then they hypothesize that it is possible to
+ approximate the residual function H(x) - x. They then talk about explicitly approximate the residual function, with 
  F(x) = H(x) - x => F(x) + x = H(x). 
  
 It is considered that despite the network being able to learn both forms, it makes it easier to learn.
