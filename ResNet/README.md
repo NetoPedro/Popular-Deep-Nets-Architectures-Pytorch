@@ -93,7 +93,7 @@ The configuration is the following
 The network number of trainable layers is 34 (notice that it is much deeper than the VGG-19).
 
 In this configuration the downsampling of the images happens in the convolutions with stride of 2, and on these layers 
-the number of channels is doubled. 
+the number of channels is doubled. Every convolutional layer is also followed by a batch normalization layer and a ReLU non linearity. 
 
 The architecture is rather similar with the residual version of this network, being the only difference the identity 
 shortcut connections that go after each 2 layers. If between the starting and the ending point of the shortcut there is 
@@ -114,6 +114,16 @@ Training hyperparameters:
     - Momentum: 0.9
     - Dropout is not used
 
+
+#### Experiments 
+
+
+Experiments with both networks either with the 34 layers configuration shown above, or a shallower 18 layers configuration, has shown that despite both networks having similar errors in the shallower configuration, when we increase the size, the plain network increases the error. On the other hand, not showing signs of degradation, the residual network lowers the validation error rate at a 34 layers configuration. The authors hypothesize that the convergence rates on the plain nets is exponentially low, making it extremely difficult to reduce the error.  
+
+Further experiments were conducted with networks of sizes 50,101 and 152 (!!!) layers. 
+To construct a 50 layers network, the 2 layers residual building blocks on the 34 layers network were replaced by 3 layers bottleneck building blocks with identity mapping. 
+
+It has been shown that this 3 deeper architectures further improve the error when compared with the previous, hence it shows that this residual networks do not suffer from the degradation problem. 
 
 ## Implementation/Architecture Reproduction 
 
