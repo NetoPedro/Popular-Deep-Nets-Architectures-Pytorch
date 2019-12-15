@@ -50,6 +50,7 @@ To be able to implement the residual training in several stacked layers, the aut
 
 Where F(x,{W_i}) represents the residual mapping that needs to be learned. 
 
+
 One of the main advantages of this approach is that it does not add any extra computational cost beside the addition operation
  which can be ignored. Furthermore, this allows to compare with other non residual (Plain) networks in a more straightforward manner. 
 
@@ -60,6 +61,10 @@ authors defined:
     
 To be the function to learn, where W_s is used to linearly project the inputs to match the size of the residual 
 mapping output.
+
+
+![Residual Building Block](https://raw.githubusercontent.com/NetoPedro/Popular-Deep-Nets-Architectures-Pytorch/master/ResNet/images/residual_building_block.png) 
+
 
 The paper experimented with two or three layers in the residual building block, with W_s being only used if dimension 
 matching is necessary, thus proving that the identity mapping is sufficient to avoid the degradation problem. 
@@ -94,11 +99,6 @@ The architecture is rather similar with the residual version of this network, be
 shortcut connections that go after each 2 layers. If between the starting and the ending point of the shortcut there is 
 a downsampling layer, it is necessary to downsample or add a padding of zeros to the identity mapping. The second is cost
  free. 
-
-#### Residual Block
-
-#### Bottleneck
-
 
 
 
