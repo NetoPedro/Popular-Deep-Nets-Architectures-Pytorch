@@ -70,6 +70,14 @@ The paper experimented with two or three layers in the residual building block, 
 matching is necessary, thus proving that the identity mapping is sufficient to avoid the degradation problem. 
 
 
+#### Bottleneck
+
+![Residual Building Block](https://raw.githubusercontent.com/NetoPedro/Popular-Deep-Nets-Architectures-Pytorch/master/ResNet/images/bottleneck_residual.png) 
+
+[Image Source](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LRrOFNeUGLZef_2NLZ0%2F-LeEJi2MCK6d2wToNmIy%2F-LeEMR0uW50GA3ny07_C%2Fbottleneck.png?alt=media&token=9e6a700d-aa96-4381-8922-b544462ba101) 
+
+For deeper networks the authors have defined the bottleneck building block, with the same complexity of the previous residual building block. The main change is that it now includes 3 convolutions, with 2 of them having a kernel size of 1x1, the idea of this 2 (1x1) convolutions is to decrease and then increase the dimensions of the input. This leads to having the 3x3 layer with smaller input size.
+
 ### Architecture 
 
 In order to compare the residual training, the authors tested a plain and a residual network with the same configuration 
