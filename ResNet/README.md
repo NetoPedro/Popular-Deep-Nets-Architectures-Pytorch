@@ -101,10 +101,18 @@ a downsampling layer, it is necessary to downsample or add a padding of zeros to
  free. 
 
 
-
 ### Training and Learning 
 
-Details of training and learning are further explained in the implementation section.
+Training hyperparameters: 
+
+    - Stochastic Gradient Descent 
+    - Mini-Batch size: 256
+    - Initial Learning Rate: 0.1
+    - Learning Rate Divided by 10 when error stops improving
+    - 600000 iterations 
+    - Weight Decay: 0.0001
+    - Momentum: 0.9
+    - Dropout is not used
 
 
 ## Implementation/Architecture Reproduction 
