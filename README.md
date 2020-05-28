@@ -24,9 +24,9 @@ Done | X | X |    |
 
 State| Paper Summary      | Implementation   | Results Summary  |
 :-------------: | :-------------: |:-------------:| :-------------:|
-Holding |  | X| X|
+Holding |  | | X|
 Doing | |  |   |
-Done | X|  |    |
+Done | X| X |    |
 
 ## [GoogLeNet (Inception v1)](https://arxiv.org/abs/1409.4842)
 
