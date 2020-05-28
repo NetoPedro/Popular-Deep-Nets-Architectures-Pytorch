@@ -116,3 +116,25 @@ class ResNet(nn.Module):
         return self._forward_impl(x)
 
 
+def _resnet(block, layers, num_classes):
+    return ResNet(num_classes, block, layers)
+
+
+def ResNet18(num_classes):
+    return _resnet(ShortcutBlock, [2, 2, 2, 2], num_classes)
+
+
+def ResNet34(num_classes):
+    return _resnet(ShortcutBlock, [3, 4, 6, 3], num_classes)
+
+
+def ResNet50(num_classes):
+    return _resnet(BottleneckBlock, [3, 4, 6, 3], num_classes)
+
+
+def ResNet101(num_classes):
+    return _resnet(BottleneckBlock, [3, 4, 23, 3], num_classes)
+
+
+def ResNet152(num_classes):
+    return _resnet(BottleneckBlock, [3, 8, 36, 3], num_classes)
