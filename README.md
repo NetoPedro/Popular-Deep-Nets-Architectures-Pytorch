@@ -32,8 +32,8 @@ Done | X| X |    |
 
 State| Paper Summary      | Implementation   | Results Summary  |
 :-------------: | :-------------: |:-------------:| :-------------:|
-Holding | X | X| X|
-Doing | |  |   |
+Holding |  | X| X|
+Doing | X |  |   |
 Done | |  |    |
 
 ## [Inception v2](https://arxiv.org/abs/1512.00567)
